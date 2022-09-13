@@ -34,3 +34,7 @@ def serve(path):
 10. Hopefully you have no other errors. Make sure you are pipenv installing every library you are using and npm installing every react library in the specific frontend folder. 
 
 11. NOTE ON DATABASES: This does not cover databases but a huge note is HEROKU DOES NOT USE SQLITE WHICH IS FLASK'S DEFAULT DATABASE! I suggest you use PostgreSQL. 
+
+12. "no web processes running" was a commin error I was getting. This can simply be fixed by running heroku ps:scale web=1 after you push to main. 
+
+13. If all else fails make sure you are checking the logs and make sure that your dynos are running and is being recognized! A good way is to use the heroku dashboard instead of cli. 
